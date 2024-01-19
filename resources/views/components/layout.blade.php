@@ -15,5 +15,6 @@
     {{$slot}}
 
     @vite('resources/js/app.js')
+    <script src="https://kit.fontawesome.com/0f3153532c.js" crossorigin="anonymous"></script>
 </body>
 </html>
