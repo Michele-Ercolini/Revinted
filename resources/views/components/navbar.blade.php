@@ -27,12 +27,14 @@
                         <a class="nav-link" href="#">Contatti</a>
                     </li>
                 </ul>
-                <div class="d-flex justify-content-end me-3 w-100">
-                    <div class="d-flex searchBox">
-                        <form class="searchForm" method="GET" action="" role="search">
+                <div class="d-flex justify-content-end me-3">
+                    <div class="d-flex justify-content-center alogn-items-center">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <a id="searchIcon" href="" onclick="event.preventDefault();document.querySelector('#form-search').submit();">
+                            <i  class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                        <form id="form-search" class="searchForm" method="GET" action="" role="search">
                             @csrf
-                            <input class="search" placeholder="Search" aria-label="Search">
-                            <button class="" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </form>
                     </div>
                     <ul class="navbar-nav mb-2 mb-lg-0">
@@ -54,7 +56,11 @@
                             </ul>
                         </li>
                     </ul>
-                    <i class="fa-solid fa-basket-shopping"></i>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <a class="decoration-none" href="">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
