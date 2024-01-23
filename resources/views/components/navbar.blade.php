@@ -28,17 +28,20 @@
                     </li>
                 </ul>
                 <div class="d-flex justify-content-end me-3">
-                    <div class="d-flex justify-content-center alogn-items-center">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <a id="searchIcon" href="" onclick="event.preventDefault();document.querySelector('#form-search').submit();">
-                            <i  class="fa-solid fa-magnifying-glass"></i>
-                        </a>
+                    <div class="searchBox ms-5">
+                        <input id="searchInput" type="text" placeholder="Search">
+                        <div class="searchBtn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="cancelBtn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
                         <form id="form-search" class="searchForm" method="GET" action="" role="search">
                             @csrf
                         </form>
                     </div>
                     <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown ms-5">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Utente
                             </a>
@@ -56,7 +59,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <div class="d-flex justify-content-center align-items-center">
+                    <div class="d-flex justify-content-center align-items-center ms-5">
                         <a class="decoration-none" href="">
                             <i class="fa-solid fa-basket-shopping"></i>
                         </a>
