@@ -1,5 +1,5 @@
 
-    <nav id="nav" class="navbar navbar-expand-lg navCustom fixed-top">
+    <nav id="nav" class="navbar navbar-expand-lg navCustom sticky-top">
         <div class="container-fluid">
             <div class="row w-100">
                 <div class="col-4">
@@ -19,13 +19,13 @@
                                     Prodotti
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Tutti i prodotti</a></li>
+                                    <li><a class="dropdown-item" href={{route("products_index")}}>Tutti i prodotti</a></li>
                                     <li><a class="dropdown-item" href="#">Categoria 1</a></li>
                                     <li><a class="dropdown-item" href="#">Categoria 2</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link fs-5" href="#">Vendi</a>
+                                <a class="nav-link fs-5" href={{route("product_create")}}>Vendi</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link fs-5" href="#">Contatti</a>
@@ -47,9 +47,11 @@
                         </div>
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item dropdown ms-5">
-                                <a class="nav-link fs-5 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Utente
-                                </a>
+                                @auth
+                                    <a class="nav-link fs-5 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{Auth::user()->name}}</a>
+                                @else
+                                    <a class="nav-link fs-5 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Utente</a>
+                                @endauth
                                 <ul class="dropdown-menu">
                                     @auth
                                     <li><hr class="dropdown-divider"></li>

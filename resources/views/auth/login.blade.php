@@ -11,6 +11,7 @@
                     <div class="mb-3">
                         <label for="userEmail" class="form-label">Email</label>
                         <input type="email" class="form-control" id="userEmail" aria-describedby="emailHelp" name="email">
+                    </div>
                     <div class="mb-3">
                         <label for="userPassword" class="form-label">Password</label>
                         <input type="password" class="form-control" id="userPassword" name="password">

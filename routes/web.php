@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PublicController::class, 'home'])->name("homepage");
+
+//Rotte Prodotti
+//index
+Route::get('/products', [ProductController::class, 'index'])->name("products_index");
+//create
+Route::get('/product/create', [ProductController::class, 'create'])->name("product_create");
